@@ -2,9 +2,8 @@ import express from "express"
 import { multerParseMiddleware } from "../middlewares/multer.middlewares.js";
 import { createTask, deleteTask, getAllTasks, getSingleTask, updateTask } from "../controllers/tasks.controller.js";
 
+// Defining router for the various routes
 const taskRouter = express.Router();
-
-
 
 //creating tasks
 taskRouter.route('/create').post(multerParseMiddleware,createTask);

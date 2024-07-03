@@ -1,3 +1,6 @@
+/**
+ * This is a utility class for standard practice to report errors
+ */
 class ApiError extends Error{
 
     constructor(

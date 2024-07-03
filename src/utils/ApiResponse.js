@@ -1,3 +1,6 @@
+/**
+ * Class for providing standard response 
+ */
 class ApiResponse {
 
     constructor(statusCode, message, data){

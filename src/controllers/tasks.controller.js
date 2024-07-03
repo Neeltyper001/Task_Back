@@ -7,19 +7,23 @@ import { Tasks } from "../models/tasks.models.js"
 
 const createTask = asyncHandler(async (req, res)=>{
 
+    // Retrieval of all fields
     const {title, description, dueDate} = req.body;
 
+    // Field Validation
     if([title,description,dueDate].some((eachField) => eachField === "")){
         throw new ApiError(400, "Fields are empty");
     }
 
+    // Creation of task
     const createdTask = await Tasks.create({
         title,
         description,
         dueDate
     })
 
-    if(createTask){
+
+    if(createdTask){
         res.status(201).json(new ApiResponse(200,"Created Task Successfully",createdTask))
     }
 
