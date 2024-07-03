@@ -12,7 +12,7 @@ app.use(cors({
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-
+// Middleware for routing to the various operations associated with tasks
 app.use("/api/v1/tasks",taskRouter);
 
 export {app};
