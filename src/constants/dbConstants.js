@@ -1,4 +1,4 @@
-// Database constants is stored here
+// Database constants are stored here
 const databaseName = "taskManagement"
 
 export {databaseName};

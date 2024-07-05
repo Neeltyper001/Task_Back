@@ -6,10 +6,12 @@ import { taskRouter } from './src/routes/tasks.routes.js';
 const app = express();
 
 // CORS [CROSS ORIGIN RESOURCE SHARING ]
-app.use(cors({
-    origin: process.env.ALLOWED_ORIGIN,
+app.use(cors(
+    {
+    Origin: process.env.ALLOWED_ORIGIN,
     methods: ["GET","POST","PUT","PATCH","DELETE"]
-}))
+}
+))
 
 // middlewares for parsing json contents and url
 app.use(express.urlencoded({extended: true}));
